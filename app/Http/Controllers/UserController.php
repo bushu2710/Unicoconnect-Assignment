@@ -22,11 +22,20 @@ class UserController extends Controller
         
         // $data=User::skip($offset)->simplePaginate($limit); //This takes 15-16 secs.
         
-        return response()->json($data);
-
-        
+        return response()->json($data);  
     }
 
+    public function getGrades(){
+
+        $userData = User::where('grades',"like", '1,3%')
+                    ->orWhere('grades',"like", '1,3,2%')->get();
+
+        return view('users',compact('userData'));
+    }
     
+    public function backupDB(){
+
+        return view('cron');
+    }
     
 }

@@ -15,18 +15,37 @@
 <body>
     
 <div class="container">
-    <h1>Fetching 20K Records at a time using RestApi</h1>
-    <table class="table table-bordered data-table">
-        <thead>
-            <tr>
-                <th>No</th>
-                <th>Name</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+<div class="card" style="width: ;">
+<div class="card-header">
+<h5 class="card-title">Unicoconnect Assignment</h5></div>
+  <div class="card-body">
+    <h5>SQL query such that there is a user table with column "grades". You have to
+find out the user records from users table where users have got grades in this pattern
+(1,3) or (1,3,2) etc</h5><br>
+
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">User</th>
+      <th scope="col">Grades</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach($userData as $data)
+    <tr>
+      <th scope="row">{{$data->id}}</th>
+      <td>{{$data->name}}</td>
+      <td>{{$data->grades}}</td>
+      <td>{{$data->email}}</td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
+</div>
+</div>
 </div>
    
 </body>
