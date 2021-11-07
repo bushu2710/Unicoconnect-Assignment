@@ -3,7 +3,9 @@
 namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
+use Carbon\Carbon;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Session;
 
 class Kernel extends ConsoleKernel
 {
@@ -25,7 +27,6 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('backup:run')->everyMinute();
-        
     }
 
     /**

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\User;
 use DB;
+use Artisan;
 
 class UserController extends Controller
 {
@@ -33,9 +34,5 @@ class UserController extends Controller
         return view('users',compact('userData'));
     }
     
-    public function backupDB(){
-
-        return view('cron');
-    }
     
 }

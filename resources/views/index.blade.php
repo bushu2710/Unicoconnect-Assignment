@@ -39,7 +39,7 @@
                 <th scope="row">1</th>
                 <td>Cron Job Scheduler</td>
                 <td>Cron Job Scheduler to backup Mysql DB to google drive.</td>
-                <td><a href="{{route('backup')}}" class="btn btn-primary">View</a></td>
+                <td><a id="cronButton" onclick=displayCommand() class="btn btn-primary">View</a></td>
                 </tr>
                 <tr>
                 <th scope="row">2</th>
@@ -62,3 +62,13 @@
    
 </body>
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+
+
+<script>
+    function displayCommand(){
+        toastr.info("Please run 'php artisan schedule:work' in the console to start the scheduler");
+    }
+</script>

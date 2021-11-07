@@ -19,4 +19,3 @@ Route::get('/', function () {
 });
 
 Route::get('/sql-page', [UserController::class,'getGrades'])->name('grades');
-Route::get('/backup', [UserController::class,'backupDB'])->name('backup');
